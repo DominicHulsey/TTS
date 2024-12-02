@@ -1,4 +1,4 @@
-from TTS.tts.utils.text.phonemizers.bangla_phonemizer import BN_Phonemizer
+# from TTS.tts.utils.text.phonemizers.bangla_phonemizer import BN_Phonemizer
 from TTS.tts.utils.text.phonemizers.base import BasePhonemizer
 from TTS.tts.utils.text.phonemizers.belarusian_phonemizer import BEL_Phonemizer
 from TTS.tts.utils.text.phonemizers.espeak_wrapper import ESpeak
@@ -12,7 +12,7 @@ except ImportError:
     JA_JP_Phonemizer = None
     pass
 
-PHONEMIZERS = {b.name(): b for b in (ESpeak, Gruut, KO_KR_Phonemizer, BN_Phonemizer)}
+PHONEMIZERS = {b.name(): b for b in (ESpeak, Gruut, KO_KR_Phonemizer)}
 
 
 ESPEAK_LANGS = list(ESpeak.supported_languages().keys())
@@ -35,7 +35,7 @@ DEF_LANG_TO_PHONEMIZER.update(_new_dict)
 DEF_LANG_TO_PHONEMIZER["en"] = DEF_LANG_TO_PHONEMIZER["en-us"]
 DEF_LANG_TO_PHONEMIZER["zh-cn"] = ZH_CN_Phonemizer.name()
 DEF_LANG_TO_PHONEMIZER["ko-kr"] = KO_KR_Phonemizer.name()
-DEF_LANG_TO_PHONEMIZER["bn"] = BN_Phonemizer.name()
+# DEF_LANG_TO_PHONEMIZER["bn"] = BN_Phonemizer.name()
 DEF_LANG_TO_PHONEMIZER["be"] = BEL_Phonemizer.name()
 
 

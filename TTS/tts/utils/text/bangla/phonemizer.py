@@ -1,7 +1,7 @@
 import re
 
 import bangla
-from bnnumerizer import numerize
+# from bnnumerizer import numerize
 from bnunicodenormalizer import Normalizer
 
 # initialize
@@ -90,7 +90,7 @@ def bangla_text_to_phonemes(text: str) -> str:
         text = text.replace(m, r)
 
     # numerize text
-    text = numerize(text)
+    # text = numerize(text)
 
     # tag sections
     text = tag_text(text)
